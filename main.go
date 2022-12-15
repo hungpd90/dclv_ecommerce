@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os"
 
@@ -23,6 +24,7 @@ func main() {
 	router.Use(cors.Default())
 	router.Use(gin.Logger())
 	routes.Routes(router)
-
+	fmt.Println(os.Getenv("TWILIO_ACCOUNT_SID"))
+	fmt.Println(os.Getenv("TWILIO_TOKEN"))
 	log.Fatal(router.Run(":" + port))
 }
