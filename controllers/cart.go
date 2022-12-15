@@ -276,7 +276,7 @@ func PaymentOrders() gin.HandlerFunc {
 		payload.PartnerCode = "MOMOIHKM20221002"
 		payload.AccessKey = "rq9CyDN11E1Z56iT"
 		payload.RequestType = "captureWallet"
-		payload.RedirectUrl = "http://localhost:3000/complete" //return page success payment
+		payload.RedirectUrl = "https://main--gentle-lolly-617c28.netlify.app/complete" //return page success payment
 		payload.IpnUrl = "http://localhost:8000/user/view-payment"
 
 		var rawSignature bytes.Buffer
