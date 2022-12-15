@@ -13,9 +13,9 @@ import (
 
 func main() {
 	port := os.Getenv("PORT")
-	os.Setenv("TWILIO_ACCOUNT_SID", "")
-	os.Setenv("TWILIO_TOKEN", "")
-	os.Setenv("SECRET_LOVE", "")
+	// os.Setenv("TWILIO_ACCOUNT_SID", "")
+	// os.Setenv("TWILIO_TOKEN", "")
+	// os.Setenv("SECRET_LOVE", "")
 	if port == "" {
 		port = "8000"
 	}
