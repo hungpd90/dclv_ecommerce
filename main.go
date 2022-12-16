@@ -26,5 +26,6 @@ func main() {
 	routes.Routes(router)
 	fmt.Println(os.Getenv("TWILIO_ACCOUNT_SID"))
 	fmt.Println(os.Getenv("TWILIO_TOKEN"))
+	fmt.Println(os.Getenv("TWILIO_FROM_PHONE_NUMBER"))
 	log.Fatal(router.Run(":" + port))
 }

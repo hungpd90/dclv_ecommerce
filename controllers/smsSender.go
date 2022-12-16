@@ -35,7 +35,7 @@ func SmsSender() gin.HandlerFunc {
 		})
 		params := &twilioApi.CreateMessageParams{}
 		params.SetTo(messages.PhoneNumberTo)
-		params.SetFrom("+18058747190")
+		params.SetFrom(os.Getenv("TWILIO_FROM_PHONE_NUMBER"))
 		params.SetBody(messages.BodyMessage)
 		_, anyErr := MessageCollection.InsertOne(ctx, messages)
 		if anyErr != nil {
